@@ -1,0 +1,70 @@
+definitions:
+  model.Status:
+    properties:
+      description:
+        type: string
+      status:
+        type: integer
+    type: object
+  model.UserInsert:
+    properties:
+      email:
+        type: string
+      firstName:
+        type: string
+      id:
+        type: integer
+      lastName:
+        type: string
+    required:
+    - email
+    - firstName
+    - lastName
+    type: object
+  service.HTTPError:
+    properties:
+      code:
+        example: 400
+        type: integer
+      message:
+        example: status bad request
+        type: string
+    type: object
+info:
+  contact: {}
+paths:
+  /user:
+    post:
+      consumes:
+      - application/json
+      description: Obtains info of Users
+      parameters:
+      - description: User
+        in: body
+        name: user
+        required: true
+        schema:
+          $ref: '#/definitions/model.UserInsert'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.Status'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/service.HTTPError'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/service.HTTPError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/service.HTTPError'
+      summary: Show user
+      tags:
+      - user
+swagger: "2.0"
