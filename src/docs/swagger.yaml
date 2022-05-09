@@ -6,21 +6,6 @@ definitions:
       status:
         type: integer
     type: object
-  model.UserInsert:
-    properties:
-      email:
-        type: string
-      firstName:
-        type: string
-      id:
-        type: integer
-      lastName:
-        type: string
-    required:
-    - email
-    - firstName
-    - lastName
-    type: object
   service.HTTPError:
     properties:
       code:
@@ -33,18 +18,17 @@ definitions:
 info:
   contact: {}
 paths:
-  /user:
-    post:
+  /user/{usrId}:
+    get:
       consumes:
       - application/json
       description: Obtains info of Users
       parameters:
-      - description: User
-        in: body
-        name: user
+      - description: ID Del usuario
+        in: path
+        name: usrId
         required: true
-        schema:
-          $ref: '#/definitions/model.UserInsert'
+        type: string
       produces:
       - application/json
       responses:

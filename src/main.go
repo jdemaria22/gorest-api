@@ -3,13 +3,12 @@ package main
 import (
 	routes "demoproject/src/api"
 	config "demoproject/src/config"
-
-	"fmt"
+	logging "demoproject/src/log"
 )
 
 func main() {
-	fmt.Println("Initializing Config...")
+	logging.Info("Initializing config")
 	config.InitConfig()
-	fmt.Println("Initializing Routes...")
+	logging.Info("Initializing routes")
 	routes.InitialiseRoutes()
 }

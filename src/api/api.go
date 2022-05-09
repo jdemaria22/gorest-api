@@ -22,7 +22,7 @@ func InitialiseRoutes() {
 
 	user := r.Group("/user")
 	{
-		user.POST("", service.PostUser)
+		user.GET("/:usrId", service.GetUser)
 	}
 
 	r.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
