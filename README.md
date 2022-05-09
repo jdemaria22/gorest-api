@@ -13,7 +13,7 @@ Packages in /src:
 - /model -> package with any struct or models for the application.
 - /service -> package with validation and logic.  
 - main -> config and initializing routes.
- 
+
 ## Contents
 
 - [Installation](#installation)
@@ -29,6 +29,7 @@ Packages in /src:
 - Open cmd in the base path and run the command "go mod tidy" (doc reference https://go.dev/ref/mod#go-mod-tidy).
 - Move into the folder "src" and run command "go run main.go" (doc reference https://go.dev/ref/mod#go-run).
 
+For update swagger documentatión, after any change you need to run swag init -g "path main.go"
 For build application you need to run command "go build [-o output] [build flags] [packages]" (doc reference of build flags https://pkg.go.dev/cmd/go).
 
 File src/notes contains the notes of the  
