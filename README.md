@@ -31,6 +31,7 @@ Packages in /src:
 - Move into the folder "src" and run command "go run main.go" (doc reference https://go.dev/ref/mod#go-run).
 
 For update swagger documentatión, after any change you need to run swag init -g "path main.go".
+Path of swagger /swagger/index.html. 
 
 For build application you need to run command "go build [-o output] [build flags] [packages]" (doc reference of build flags https://pkg.go.dev/cmd/go).
 
