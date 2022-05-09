@@ -11,13 +11,14 @@ Packages in /src:
 - /adapter/model -> Structs of request for the integrations API.
 - /docs -> swagger documentation, using https://github.com/swaggo/files and https://github.com/swaggo/swag. For integration with GIN https://github.com/swaggo/gin-swagger.
 - /model -> package with any struct or models for the application.
-- /service -> package with validation and logic.  
+- /service -> package with validators and logic.  
 - main -> config and initializing routes.
 
 ## Contents
 
 - [Installation](#installation)
 - [Usage](#usage)
+- [Reference](#reference)
 
 ## Installation
 
@@ -33,4 +34,13 @@ For update swagger documentatión, after any change you need to run swag init -g
 
 For build application you need to run command "go build [-o output] [build flags] [packages]" (doc reference of build flags https://pkg.go.dev/cmd/go).
 
-File src/notes contains the notes of the  
+
+## reference
+
+Packages externals: 
+- https://github.com/gin-gonic/gin
+- https://github.com/swaggo/swag
+- https://github.com/swaggo/files
+- https://github.com/swaggo/gin-swagger
+- https://github.com/go-playground/validator/v10
+- https://github.com/joho/godotenv
