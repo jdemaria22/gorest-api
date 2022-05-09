@@ -35,7 +35,7 @@ For update swagger documentatión, after any change you need to run swag init -g
 For build application you need to run command "go build [-o output] [build flags] [packages]" (doc reference of build flags https://pkg.go.dev/cmd/go).
 
 
-## reference
+## Reference
 
 Packages externals: 
 - https://github.com/gin-gonic/gin
